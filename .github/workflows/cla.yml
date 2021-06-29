@@ -1,9 +1,6 @@
 # This workflow compile and push a docker image for release purposes
 name: Java CI and release docker
-on:
-  workflow_dispatch:
-  push:
-    branches: [ github-action ]
+on: [push, pull_request]
 jobs:
   build:
     runs-on: ubuntu-latest
