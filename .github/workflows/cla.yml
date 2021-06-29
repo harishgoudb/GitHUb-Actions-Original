@@ -22,7 +22,7 @@ jobs:
         JF_ARTIFACTORY_1: ${{ secrets.ARTIFACTORY_TOKEN_BASE64 }}
         JFROG_CLI_LOG_LEVEL: DEBUG
     - run: |
-        jfrog rt mvnc --global --server-id-resolve=olea --server-id-deploy=olea --repo-resolve-releases=olea-mvn --repo-resolve-snapshots=olea-mvn --repo-deploy-releases=olea-mvn --repo-deploy-snapshots=olea-mvn
+        jfrog rt mvnc --global --server-id-resolve=artif --server-id-deploy=artif --repo-resolve-releases=libs-release --repo-resolve-snapshots=libs-snapshot --repo-deploy-releases=libs-release-local --repo-deploy-snapshots=libs-snapshot-local
     - name: Cache local Maven repository
       uses: actions/cache@v2
       with:
