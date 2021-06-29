@@ -42,8 +42,8 @@ jobs:
     - name: Docker build
       run: |
         docker build -t $IMAGE_REPO_NAME --build-arg JAR_FILE=$IMAGE_REPO_NAME/target/$IMAGE_REPO_NAME.jar .
-        docker tag $IMAGE_REPO_NAME olea.jfrog.io/olea-docker/$IMAGE_REPO_NAME:${GITHUB_REF##*/}
-        jfrog rt dp olea.jfrog.io/olea-docker/$IMAGE_REPO_NAME:${GITHUB_REF##*/} olea-docker
+        docker tag $IMAGE_REPO_NAME vigneshs.jfrog.io/olea-docker/$IMAGE_REPO_NAME:${GITHUB_REF##*/}
+        jfrog rt dp vigneshs.jfrog.io/olea-docker/$IMAGE_REPO_NAME:${GITHUB_REF##*/} olea-docker
       env:
         JFROG_CLI_LOG_LEVEL: DEBUG
-        IMAGE_REPO_NAME: olea-sys-service
+        IMAGE_REPO_NAME: bandi-docker-local
