@@ -19,7 +19,7 @@ jobs:
         jfrog rt ping
     - uses: jfrog/setup-jfrog-cli@v1
       env:
-        JF_ARTIFACTORY_1: ${{ secrets.ARTIFACTORY_TOKEN_BASE64 }}
+        JF_ARTIFACTORY_1: ${{ secrets.HARISH_CLI_GITHUB_ACTIONS }}
         JFROG_CLI_LOG_LEVEL: DEBUG
     - run: |
         jfrog rt mvnc --global --server-id-resolve=artif --server-id-deploy=artif --repo-resolve-releases=libs-release --repo-resolve-snapshots=libs-snapshot --repo-deploy-releases=libs-release-local --repo-deploy-snapshots=libs-snapshot-local
