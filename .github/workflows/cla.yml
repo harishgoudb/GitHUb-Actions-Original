@@ -42,4 +42,4 @@ jobs:
         jfrog rt dp vigneshs.jfrog.io/docker/$IMAGE_REPO_NAME:${GITHUB_REF##*/} docker
       env:
         JFROG_CLI_LOG_LEVEL: DEBUG
-        IMAGE_REPO_NAME: bandi-docker-local
+        IMAGE_REPO_NAME: docker
