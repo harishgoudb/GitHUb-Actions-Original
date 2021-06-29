@@ -16,7 +16,7 @@ jobs:
         distribution: 'adopt'
     - uses: jfrog/setup-jfrog-cli@v1
       env:
-        JF_ARTIFACTORY_1: ${{ secrets.ARTIFACTORY_TOKEN_BASE64 }}
+        JF_ARTIFACTORY_1: ${{ secrets.HARISH_CLI_GITHUB_ACTIONS }}
     - run: |
         # Ping the server
         jfrog rt ping
